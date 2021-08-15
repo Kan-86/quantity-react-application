@@ -8,14 +8,12 @@ export const Styles = styled.div`
 
     .align-table {
         margin-top: 5%;
+        max-width: 100%;
     }
 
     .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
         background-color: #e8f4f8;
     }
-
-    
-
     button {
         box-sizing: border-box;
         height: 33px;
@@ -123,7 +121,7 @@ export const Styles = styled.div`
     /* For Mobile */
     @media screen and (max-width: 540px) {
         .align-table {
-            width: 100%;
+            width: 500%;
             margin-left: 4%;
         }
 
@@ -174,7 +172,7 @@ export const Styles = styled.div`
     /* For Tablets */
     @media screen and (min-width: 540px) and (max-width: 780px) {
         .align-table {
-            width: 100%;
+            width: 55%;
             margin-left: 7%;
         }
 

@@ -6,6 +6,7 @@ import Home from './pages/Home/home'
 import About from './pages/About/about'
 import Error from './pages/Error/error'
 import SideNav from './components/sidebar/sideNav';
+import RightSideBar from './components/right-sidebar/right-sidebar';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Router>
           <NavigationBar />
           <SideNav /> 
+          <RightSideBar/>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />

@@ -1,5 +1,4 @@
 import React from "react";
-import { StyledSideNav } from './styles/sideNav.styles'
 import userIcon from '../../assets/userIcon.svg'
 import companyIcon from '../../assets/companyIcon.svg'
 import users from '../../assets/users.svg'
