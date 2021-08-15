@@ -1,0 +1,62 @@
+[
+  {
+    "id": "a6e290bd-b5ff-4d90-951f-f6d7dee36af3",
+    "name": "Yundt, Sauer and Towne",
+    "status": "SUSPENDED",
+    "accountCount": 17
+  },
+  {
+    "id": "2c62d2f3-0f79-4d62-8627-adb744830a93",
+    "name": "Lueilwitz, Daugherty and Davis",
+    "status": "SUSPENDED",
+    "accountCount": 81
+  },
+  {
+    "id": "281501b9-5405-487a-8540-4a7f61c6bfea",
+    "name": "Bode, Rosenbaum and Brown",
+    "status": "SUSPENDED",
+    "accountCount": 27
+  },
+  {
+    "id": "fb3891ec-6277-438c-8610-26069b18fe44",
+    "name": "Mosciski, O'Kon and McCullough",
+    "status": "ACTIVE",
+    "accountCount": 40
+  },
+  {
+    "id": "2396bc27-69c8-44fb-b5e9-ebda4c36cd8c",
+    "name": "Durgan and Sons",
+    "status": "SUSPENDED",
+    "accountCount": 18
+  },
+  {
+    "id": "2dff55f2-f2ae-4fc6-90ec-7733c637df17",
+    "name": "Klein, Sawayn and Shanahan",
+    "status": "ACTIVE",
+    "accountCount": 79
+  },
+  {
+    "id": "7bb0d609-1af5-4b9f-b8e8-33e2cf05042e",
+    "name": "Paucek - Koss",
+    "status": "ACTIVE",
+    "accountCount": 51
+  },
+  {
+    "id": "3d0356ec-9cb0-4e84-8d66-b8e0056de676",
+    "name": "Kohler - Wiegand",
+    "status": "ACTIVE",
+    "accountCount": 99
+  },
+  {
+    "id": "fe49f3ee-ae39-430f-b849-9f5bd150ad25",
+    "name": "Gibson Group",
+    "status": "SUSPENDED",
+    "accountCount": 49
+  },
+  {
+    "id": "936a95cb-a59c-4322-8941-4fb965874573",
+    "name": "Yost, Grant and Kuhic",
+    "status": "ACTIVE",
+    "accountCount": 27
+  }
+]

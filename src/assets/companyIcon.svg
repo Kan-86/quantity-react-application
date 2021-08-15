@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="20px" viewBox="0 0 26 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>67404EB2-66C9-4782-9A44-9407325616F5</title>
+    <g id="Admin-console" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Admin---Groups" transform="translate(-37.000000, -320.000000)" fill="#224743" fill-rule="nonzero">
+            <g id="icon-nav/accounts" transform="translate(37.000000, 320.000000)">
+                <path d="M12,0 C13.1045695,0 14,0.8954305 14,2 L14,7 L14,7 L24,7 C25.1045695,7 26,7.8954305 26,9 L26,18 C26,19.1045695 25.1045695,20 24,20 L2,20 C0.8954305,20 0,19.1045695 0,18 L0,2 C0,0.8954305 0.8954305,0 2,0 L12,0 Z M12,2 L2,2 L2,18 L4,18 L4,12 L10,12 L10,18 L12,18 L12,2 Z M24,9 L14,9 L14,18 L16,18 L16,12 L22,12 L22,18 L24,18 L24,9 Z M20,14 L18,14 L18,18 L20,18 L20,14 Z M8,14 L6,14 L6,18 L8,18 L8,14 Z M10,8 L10,10 L8,10 L8,8 L10,8 Z M6,8 L6,10 L4,10 L4,8 L6,8 Z M10,4 L10,6 L8,6 L8,4 L10,4 Z M6,4 L6,6 L4,6 L4,4 L6,4 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

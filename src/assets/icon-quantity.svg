@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>C15CD208-A11C-48D1-95A6-9FBF610C29A9</title>
+    <defs>
+        <polygon id="path-1" points="0 40 40 40 40 0 0 0"></polygon>
+    </defs>
+    <g id="Admin-console" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Admin---Groups" transform="translate(-30.000000, -25.000000)">
+            <g id="icon-eflow" transform="translate(30.000000, 25.000000)">
+                <rect id="BG" fill="#224743" fill-rule="nonzero" x="0" y="0" width="40" height="40" rx="5"></rect>
+                <path d="M17.3029331,14.3033281 C18.7925845,12.813664 21.2071766,12.813664 22.696828,14.3033281 C24.1860017,15.7929922 24.1860017,18.207605 22.696828,19.6972691 C21.2071766,21.1869332 18.7925845,21.1869332 17.3029331,19.6972691 C15.8137594,18.207605 15.8137594,15.7929922 17.3029331,14.3033281 M24.9499377,12.050677 C22.2157251,9.31644101 17.7835583,9.31644101 15.0503012,12.050677 C12.3165663,14.7839574 12.3165663,19.216162 15.0503012,21.9499202 C16.4166908,23.3163216 18.2068524,23.9995222 19.9974918,24 L27,24 L27,21.3082849 L25.5117819,21.3082849 C27.663129,18.5611494 27.4791919,14.5799527 24.9499377,12.050677" id="Fill-2" fill="#FFFFFF"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-5"></g>
+                <polygon id="Fill-4" fill="#F7A600" mask="url(#mask-2)" points="14 31 27 31 27 28 14 28"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
