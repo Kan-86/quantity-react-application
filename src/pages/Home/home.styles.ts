@@ -32,6 +32,10 @@ export const Styles = styled.div`
         word-wrap: break-word;
     }
 
+    .button-alignment {
+        padding-left: 70%;
+    }
+
     .three-dots {
         height: 15px;
         width: 3px;

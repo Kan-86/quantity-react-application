@@ -4,9 +4,8 @@ import {CompanyGroup} from '../home'
 
 
 const ReadOnlyRow: React.FC<CompanyGroup> = (value) => {
-    console.log(`inded: ${value.index}`)
     return (
-        <tr key={value.index}>
+        <tr >
         <td></td>
         <td><b>{value.name}</b></td>
         <td>{

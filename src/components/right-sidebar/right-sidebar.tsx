@@ -1,18 +1,27 @@
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 import { StyledRightSidebar } from './right-sidebar.styles'
 
-class RightSideBar extends React.Component {
+const RightSideBar: React.FC = () => {
 
-    render() {
-      return (
-        <StyledRightSidebar >
-          <div className="styledRightSidebar">
-            <input className="input-field" placeholder="Search...">
-            </input>
-          </div>
-        </StyledRightSidebar>
-      );
-    }
+  const [searchValue, setSearchValue] = useState("");
+
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.currentTarget.value)
+  }
+  console.log(`search value: ${searchValue}`);
+
+  return (
+    <StyledRightSidebar >
+      <div className="styledRightSidebar">
+        <input type="text" 
+              className="input-field" 
+              placeholder="Search..."
+              onChange={onChange}
+        >
+        </input>
+      </div>
+    </StyledRightSidebar>
+  );
 }
 
 export default RightSideBar;

@@ -4,7 +4,6 @@ import {CompanyGroup} from '../home'
 
 
 const EditableRow: React.FC<CompanyGroup> = (value) => {
-    console.log(`inded: ${value.index}`)
     return (
         <>
             <td></td>
