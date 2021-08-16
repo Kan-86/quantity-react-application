@@ -32,7 +32,8 @@ export const StyledRightSidebar = styled.div`
     /* For Mobile */
     @media screen and (max-width: 540px) {
         .styledRightSidebar {
-            width: 20px;
+            width: 80%;
+            z-index: 0;
         }
         
     }
@@ -40,6 +41,7 @@ export const StyledRightSidebar = styled.div`
     /* For Tablets */
     @media screen and (min-width: 540px) and (max-width: 780px) {
         .styledRightSidebar {
+            top: 0;
             width: 30%;
         }
     }

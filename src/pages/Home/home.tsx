@@ -58,20 +58,19 @@ const Home = () => {
                                     ? <tr key={index}>
                                         <td></td>
                                         <td><b>{value.name}</b></td>
-                                        <td>{
+                                        <td colSpan={2}>{
                                             value.status === "SUSPENDED" 
                                             ? <span className="dot-suspended"><p>{value.status}</p></span> 
                                             : <span className="dot-active"><p>{value.status}</p></span>
                                             
-                                            }
-                                        
-                                        </td>
-                                        <td>
-                                            <button className="buttonHover">EDIT SETTINGS</button>
+                                            }                                         
+                                            <button className="buttonHover button-alignment">EDIT SETTINGS</button>
                                             <button className="buttonHover">ADD ACCOUNT</button>
                                             <button className="buttonHover">MANAGE ACCOUNTS</button>
                                             <button className="buttonHover">MORE</button>
                                             <span className="three-dots">&#8942;</span>
+                                        </td>
+                                        <td >
                                         </td>
                                     </tr> 
                                     : <tr key={index} onMouseOver={() => MouseOverRender(index)}>

@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 // Css Code
 export const Styles = styled.div`
-    flex: 1; 
-    align-items: center;
+
     font-family: "Source Sans Pro";
 
     .align-table {
@@ -15,6 +14,7 @@ export const Styles = styled.div`
         background-color: #e8f4f8;
     }
     button {
+        flex-direction: row;
         box-sizing: border-box;
         height: 33px;
         width: 100px;
@@ -32,9 +32,7 @@ export const Styles = styled.div`
         word-wrap: break-word;
     }
 
-    .button-alignment {
-        padding-left: 70%;
-    }
+
 
     .three-dots {
         height: 15px;
@@ -82,6 +80,21 @@ export const Styles = styled.div`
         padding-left: 25%; 
     }
 
+
+
+    .groups {
+        padding-left: 135px;
+        padding-top: 70px;
+        height: 44px;
+        width: 112px;
+        color: #000000;
+        font-family: "Source Sans Pro";
+        font-size: 35px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 44px;
+    }
+
     .dot-suspended {
         height: 13px;
         width: 13px;
@@ -98,28 +111,21 @@ export const Styles = styled.div`
         display: inline-block;
     }
 
-    .groups {
-        padding-left: 135px;
-        padding-top: 70px;
-        height: 44px;
-        width: 112px;
-        color: #000000;
-        font-family: "Source Sans Pro";
-        font-size: 35px;
-        font-weight: bold;
-        letter-spacing: 0;
-        line-height: 44px;
+    .button-alignment {
+        margin-left: 16%;
     }
 
     p {
+        
         padding-left: 20px;
+        padding-right: 100px;
         height: 20px;
         width: 41px;
         color: #606060;
         font-family: "Source Sans Pro";
-        font-size: 16px;
+        font-size: 13px;
         letter-spacing: 0;
-        line-height: 20px;
+        line-height: 15px;
     }
 
     /* For Mobile */
@@ -163,13 +169,18 @@ export const Styles = styled.div`
             border-radius: 4px;
             background-color: #e8f4f8;
             color: #008AC6;
-            font-size: 10px;
+            font-size: 9px;
             font-family: "Source Sans Pro";
             font-weight: bold;
             letter-spacing: 0;
             line-height: 15px;   
             text-align: center;
-            white-space: normal;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+
+        .button-alignment {
+            margin-left: 0%;
         }
     }
 
