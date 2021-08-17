@@ -187,14 +187,33 @@ export const Styles = styled.div`
     /* For Tablets */
     @media screen and (min-width: 540px) and (max-width: 780px) {
         .align-table {
-            width: 55%;
-            margin-left: 7%;
+            width: 100%;
+            margin-left: 5%;
         }
 
         .groups{
             padding-left: 80px;
             padding-top: 25px;
             font-size: 25px;
+        }
+
+        button {
+            box-sizing: border-box;
+            margin-left: 1px;
+            height: 33px;
+            width: 80px;
+            border: 1px solid #e8f4f8;
+            border-radius: 4px;
+            background-color: #e8f4f8;
+            color: #008AC6;
+            font-size: 9px;
+            font-family: "Source Sans Pro";
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 15px;   
+            text-align: center;
+            white-space: nowrap;
+            word-wrap: break-word;
         }
 
         .dot-active {
@@ -208,11 +227,11 @@ export const Styles = styled.div`
         }
 
         td {
-            font-size: 15px;
+            font-size: 11px;
         }
 
         p {
-            font-size: 15px;
+            font-size: 10px;
         }
     }
 `;

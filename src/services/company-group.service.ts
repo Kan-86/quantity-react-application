@@ -8,13 +8,14 @@ export type CompanyGroup = {
 
 // Implementation code where T is the returned data shape
 export  function api<CompanyGroup>(url: string): Promise<CompanyGroup> {
-  const body = "Name";
+  const bodyMessage = "Name";
   return  fetch(url, {
     method: 'POST',
     headers: { 
+      'ApiKey': 'WW91IG1hZGUgYSB0aW1lIG1hY2hpbmU/IE91dCBvZiBhIERlTG9yZWFuPw==',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify(bodyMessage)
   })
     .then(response => {
       if (!response.ok) {
