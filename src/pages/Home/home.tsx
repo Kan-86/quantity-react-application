@@ -1,25 +1,54 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect} from 'react';
 import {Styles} from './home.styles'
 import { Table } from 'react-bootstrap';
-import data from '../../assets/data2.json';
+/* import jsonData from '../../assets/data2.json'; */
 import { StyledRightSidebar } from '../../components/right-sidebar/right-sidebar.styles'
+import {api} from '../../services/company-group.service'
+import EditableRow from './TableRows/editable-row';
+import ReadOnlyRow from './TableRows/read-only-row';
 
 export type CompanyGroup = {
     id: string,
     name: string,
     status: string,
-    accountCount: number
+    accountCount: number,
+    index: number
 }
 
 const Home = () => {
-    const [groups] = useState(data);
+    const [groups, setGroups] = useState<CompanyGroup[]>();
     const [editGroupId, setEditGroupId] = useState(null);
     const [searchValue, setSearchValue] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(10);
 
+    const indexOfLastPage = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPage - postsPerPage;
+    const currentPosts = groups?.slice(indexOfFirstPost, indexOfLastPage);
 
+    const pageNumbers = [];
+    if (groups?.length !== undefined) {
+        for(let i = 1; i <= Math.ceil(groups?.length / postsPerPage); i++) {
+            pageNumbers.push(i);
+        }
+    }
+
+    // Change page
+    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+    useEffect(() => {
+        // Consumer
+        api<CompanyGroup[]>('http://localhost:3001/api/v1/group')
+            .then((result) => {
+                setGroups(result);
+            })
+            .catch(error => {
+                console.log(`Error: ${error}`);
+        })
+    }, []);
 
     // Mouse over to populate table with buttons
-    function MouseOverRender(index: any) {
+    const MouseOverRender = (index: any) => {
         setEditGroupId(index);
     }
 
@@ -45,7 +74,7 @@ const Home = () => {
                         </tr>
                     </thead>
                     <tbody >
-                        {groups.filter((val) => {
+                        {currentPosts?.filter((val) => {
                             if (searchValue === "") {
                                 return val;
                             } else if (val.name.toLowerCase().includes(searchValue.toLowerCase()) 
@@ -55,41 +84,43 @@ const Home = () => {
                         }).map((value, index) => 
                             <Fragment key={index}>
                                 { editGroupId === index 
-                                    ? <tr key={index}>
-                                        <td></td>
-                                        <td><b>{value.name}</b></td>
-                                        <td colSpan={2}>{
-                                            value.status === "SUSPENDED" 
-                                            ? <span className="dot-suspended"><p>{value.status}</p></span> 
-                                            : <span className="dot-active"><p>{value.status}</p></span>
-                                            
-                                            }                                         
-                                            <button className="buttonHover button-alignment">EDIT SETTINGS</button>
-                                            <button className="buttonHover">ADD ACCOUNT</button>
-                                            <button className="buttonHover">MANAGE ACCOUNTS</button>
-                                            <button className="buttonHover">MORE</button>
-                                            <span className="three-dots">&#8942;</span>
-                                        </td>
-                                        <td >
-                                        </td>
-                                    </tr> 
+                                    ? <EditableRow 
+                                        id={value.id}
+                                        name={value.name}
+                                        status={value.status}
+                                        accountCount={value.accountCount}
+                                        index={index}
+                                    />
                                     : <tr key={index} onMouseOver={() => MouseOverRender(index)}>
-                                        <td></td>
-                                        <td><b>{value.name}</b></td>
-                                        <td>{
-                                            value.status === "SUSPENDED" 
-                                            ? <span className="dot-suspended"><p>{value.status}</p></span> 
-                                            : <span className="dot-active"><p>{value.status}</p></span>}</td>
-                                        <td>
-                                            {value.accountCount}
-                                        </td>
+                                        <ReadOnlyRow 
+                                            id={value.id}
+                                            name={value.name}
+                                            status={value.status}
+                                            accountCount={value.accountCount}
+                                            index={index}
+                                        />
                                     </tr> 
                                 }
                             </Fragment>
                         )} 
                     </tbody>
                 </Table>
-            </Styles>
+
+            </Styles>                
+            <div className="pagination">
+                <nav>
+                    <ul className="pagination">
+                        {pageNumbers.map((value, index) => (
+                            <li key={index} className="page-item">
+                                <a onClick={() => paginate(value)}  className="page-link">
+                                    {value}    
+                                </a> 
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
+
         </StyledRightSidebar>
     );
 }

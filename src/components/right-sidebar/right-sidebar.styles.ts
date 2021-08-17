@@ -21,6 +21,10 @@ export const StyledRightSidebar = styled.div`
         outline: none;
     }
 
+    .pagination {
+        padding-left: 25%;
+    }
+
     .input-field {
         height: 74px;
         width: 100%;
